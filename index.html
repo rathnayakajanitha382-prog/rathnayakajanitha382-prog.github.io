@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Janitha Rathnayaka's technology, research and business portfolio.">
+  <title>Janitha Rathnayaka | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#home">JANITHA<span>.</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container hero" id="home">
+  <div>
+    <div class="eyebrow">Technology · Business · Research</div>
+    <h1>Hello, I'm<br><span>Janitha Rathnayaka.</span></h1>
+    <p class="muted">
+      An aspiring technology and business professional interested in
+      computer science, artificial intelligence, data science, finance
+      and research. I am building my skills through continuous learning
+      and practical projects.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </div>
+  <aside class="card">
+    <div class="avatar">JR</div>
+    <h2>My Direction</h2>
+    <p class="muted">Combining technology, business, finance and analytical thinking to solve meaningful problems.</p>
+    <div class="pills">
+      <span class="pill">Computer Science</span>
+      <span class="pill">AI & Data</span>
+      <span class="pill">Finance</span>
+      <span class="pill">Research</span>
+    </div>
+  </aside>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="eyebrow">About Me</div>
+    <h2>Learning today. Building for tomorrow.</h2>
+    <p class="muted">I am interested in using technology and analytical thinking to solve meaningful problems, while developing knowledge across business and financial management.</p>
+    <div class="grid">
+      <article class="card"><h3>🎓 Education</h3><p class="muted">Continuously developing academic knowledge and practical skills.</p></article>
+      <article class="card"><h3>🔬 Research</h3><p class="muted">Investigating questions, evaluating evidence and communicating findings.</p></article>
+      <article class="card"><h3>🚀 Vision</h3><p class="muted">Building a career at the intersection of technology and business.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="container">
+    <div class="eyebrow">Areas of Interest</div>
+    <h2>What I am exploring</h2>
+    <div class="grid">
+      <article class="card"><h3>🤖 Artificial Intelligence</h3><p class="muted">AI applications and machine learning.</p></article>
+      <article class="card"><h3>💻 Software & Data</h3><p class="muted">Programming, databases and data science.</p></article>
+      <article class="card"><h3>📈 Business & Finance</h3><p class="muted">Corporate finance, economics and strategy.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="eyebrow">Skills in Progress</div>
+    <h2>My Learning Toolkit</h2>
+    <div class="pills">
+      <span class="pill">Python</span><span class="pill">HTML</span>
+      <span class="pill">CSS</span><span class="pill">JavaScript</span>
+      <span class="pill">SQL</span><span class="pill">GitHub</span>
+      <span class="pill">AI</span><span class="pill">Data Science</span>
+      <span class="pill">Research</span><span class="pill">Finance</span>
+      <span class="pill">Economics</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="eyebrow">Portfolio</div>
+    <h2>Projects & Experiments</h2>
+    <p class="muted">Projects saved in the database will appear here.</p>
+    <div id="projectList" class="project-grid">
+      <article class="card">Loading projects...</article>
+    </div>
+    <p id="projectStatus" class="status" role="status"></p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow">Get in Touch</div>
+    <h2>Let's connect.</h2>
+    <div class="grid" style="grid-template-columns:1fr 2fr">
+      <article class="card">
+        <h3>Connect</h3>
+        <p class="muted">Technology, research, business and finance.</p>
+        <p class="muted">Sri Lanka</p>
+      </article>
+      <article class="card">
+        <form id="contactForm">
+          <label>Your name<input id="contactName" maxlength="100" required></label>
+          <label>Your email<input id="contactEmail" type="email" maxlength="254" required></label>
+          <label>Message<textarea id="contactMessage" maxlength="5000" required></textarea></label>
+          <button class="primary" type="submit">Send Message</button>
+          <p id="contactStatus" class="status" role="status"></p>
+        </form>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="card" id="adminPanel">
+    <button id="logoutButton" class="secondary" type="button">Sign Out</button>
+    <h2>Admin Dashboard</h2>
+    <h3>Add Project</h3>
+    <form id="projectForm">
+      <label>Project title<input id="projectTitle" maxlength="150" required></label>
+      <label>Description<textarea id="projectDescription" maxlength="3000" required></textarea></label>
+      <label>Technology / category<input id="projectTech" maxlength="100"></label>
+      <label>Project URL (optional)<input id="projectUrl" type="url" maxlength="1000" placeholder="https://..."></label>
+      <button class="primary" type="submit">Add Project</button>
+      <p id="adminProjectStatus" class="status" role="status"></p>
+    </form>
+    <h3>Manage Projects</h3>
+    <div id="adminProjectList"></div>
+    <h3>Contact Messages</h3>
+    <div id="adminMessages"></div>
+    <p id="adminStatus" class="status" role="status"></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© <span id="year"></span> Janitha Rathnayaka</span>
+    <button id="loginOpen" class="secondary" type="button">Admin Login</button>
+  </div>
+</footer>
+
+<dialog id="loginDialog">
+  <form id="loginForm">
+    <h2>Admin Login</h2>
+    <label>Email<input id="adminEmail" type="email" autocomplete="username" required></label>
+    <label>Password<input id="adminPassword" type="password" autocomplete="current-password" required></label>
+    <p id="loginStatus" class="status" role="status"></p>
+    <button class="primary" type="submit">Sign In</button>
+    <button class="secondary" id="loginCancel" type="button">Cancel</button>
+  </form>
+</dialog>
+</body>
+</html>
